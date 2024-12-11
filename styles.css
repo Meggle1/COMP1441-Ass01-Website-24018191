@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: none;
+}
+
+/* --- Media Queries --- */
+
+@media only screen and (max-width: 1024px) {
+    * {
+        font-size: 15px;
+    }
+
+    .gridcontainer {
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "main main main"
+        "footer footer footer";
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    * {
+        font-size: 18px;
+    }
+
+    .gridcontainer { 
+    grid-template-areas: 
+    ". header ."
+    ". navbar ."
+    ". main ."
+    "footer footer footer";
+    }
+}
+
+.gridcontainer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+/* --> Media query here for grid columns <-- */
+
+/* --- Header --- */
+
+.header {
+    /* border: 1px solid red; */
+    grid-area: header;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1.25fr;
+    grid-template-areas: 
+    "logo . searchbar";
+    align-items: center;
+}
+
+.logo > img {
+    grid-area: logo;
+    height: auto;
+    width: 10rem;
+    object-fit: contain;
+}
+
+.searchbar {
+    grid-area: searchbar;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+
+.searchInput {
+    width: 8rem;
+    border: 3px solid purple;
+    border-right: none;
+    height: 2rem;
+}
+
+.searchButton {
+    width: 30px;
+    border: 1px solid purple;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    height: 2rem;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    align-items:baseline;
+    justify-content: center;
+    display: flex;
+    grid-area: navbar;
+    height: 6rem;
+    
+}
+
+.navlist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlist li {
+    padding: 0.25rem;
+    border: 1px solid black;
+    background-color: rgb(163, 163, 163);
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+/* --- Main Content --- */
+
+.main-container {
+    /* border: 1px solid green; */
+    grid-area: main;
+    min-height: 80vh; /* Temporary */
+    overflow-x: auto;
+}
+
+.widebox {
+    background-color: lightblue;
+    border: 1px solid lightskyblue;
+    height: 40vh;
+}
+
+.scroll-box-container {
+    list-style-type: none; /* Removes list dots */
+    margin: 5vh 0 5vh;
+    display: flex;
+    gap: 2vw;
+    overflow-x: scroll; /* Hides overflow and adds scrollbar */
+    padding: 1em 0 1em;
+}
+
+.scroll-box-container::before, 
+.scroll-box-container::after { /* Uses psuedo-elements to prevent first row of 10px being taken up */
+  content: '';
+} 
+
+.scroll-box_item {
+    background-color: lightblue;
+    border: 1px solid lightskyblue;
+    flex: 0 0 auto;
+    
+}
+
+.scroll-box-item > img {
+    height: 10rem;
+    width: 10rem;
+    object-fit: scale-down;
+}
+
+/* --- Footer --- */
+
+.footer {
+    border: 1px solid black;
+    align-items: center;
+    height: 4.5rem;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2 0 2em;
+    margin-top: 12rem;
+}
+
+.footer_copyright {
+    border: 1px solid black;
+    padding: 0.2rem;
+}
+
+.footer_socials {
+    height: 30px;
+    width: fit-content;
+    margin-top: 0.4rem;
+}
+.footer_socials li {
+    border-right: 1px solid black;
+    display: inline;
+    padding: 0.25vw;
+}
+
+.footer_socials :last-child { /* Removes right border from final list element */ 
+    border-right: none;
+}
