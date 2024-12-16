@@ -1,0 +1,38 @@
+.checkoutgrid-container {
+    grid-template-areas: 
+    "info . overview" 
+    "payment payment payment";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.customerDetails-container {
+    grid-area: info;
+    border: 1px black solid;
+    height: 28rem;
+    overflow-y: scroll;
+}
+
+.customerDetails ul {
+    
+}
+
+.paymentOverview-wrapper {
+    grid-area: overview;
+    border: 1px black solid;
+    height: 28rem;
+}
+
+.paymentButton {
+    grid-area: payment;
+    border: 1px black solid;
+    border-radius: 1rem;
+    margin: 7rem;
+    width: 25rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    font-size: 2rem;
+}

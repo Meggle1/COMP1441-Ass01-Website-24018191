@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    background-color: none;
 }
 
 /* --- Media Queries --- */
@@ -19,6 +18,15 @@
         "main main main"
         "footer footer footer";
     }
+
+    .header, .navbar, .main-container { /* Adds some margin so it doesnt reach the edge of screen */
+        margin: 0 1rem 0 1rem;
+    }
+
+    .footer {
+        height: 6rem !important;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -33,6 +41,7 @@
     ". main ."
     "footer footer footer";
     }
+
 }
 
 .gridcontainer {
@@ -41,14 +50,12 @@
     grid-template-columns: 1fr 3fr 1fr;
 }
 
-/* --> Media query here for grid columns <-- */
-
 /* --- Header --- */
 
 .header {
     /* border: 1px solid red; */
     grid-area: header;
-    height: fit-content;
+    height: 4rem;
     display: grid;
     grid-template-columns: 1fr 4fr 1.25fr;
     grid-template-areas: 
@@ -94,15 +101,16 @@
     justify-content: center;
     display: flex;
     grid-area: navbar;
-    height: 6rem;
-    
+    height: 4rem;
+    margin: 0.4rem 0 4rem;
 }
 
 .navlist {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 0.1rem 0 0.1rem;
 }
 
 .navlist li {
@@ -110,8 +118,13 @@
     border: 1px solid black;
     background-color: rgb(163, 163, 163);
     display: inline-block;
-    width: 25%;
+    width: calc(85%/4);
     text-align: center;
+    margin: 0 2rem 0 0;
+}
+
+.navlist li:last-child {
+    margin: 0;
 }
 
 /* --- Main Content --- */
@@ -161,13 +174,14 @@
 .footer {
     border: 1px solid black;
     align-items: center;
-    height: 4.5rem;
+    height: 8rem;
     grid-area: footer;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2 0 2em;
+    padding: 1rem;
     margin-top: 12rem;
+    background-color: #ffc5ce;
 }
 
 .footer_copyright {
@@ -176,14 +190,23 @@
 }
 
 .footer_socials {
-    height: 30px;
-    width: fit-content;
-    margin-top: 0.4rem;
-}
-.footer_socials li {
-    border-right: 1px solid black;
-    display: inline;
-    padding: 0.25vw;
+    height: 5rem;
+    margin-top: 1.5rem;
+    background-color: whitesmoke;
+    padding: 0.2rem;
+    align-content: center;
+    li {
+        border-right: 1px solid rgb(51, 51, 51);
+        /* border-left: 1px solid rgb(51, 51, 51); */
+        display: inline-block;
+        padding: 0.25vw;
+        width: 2rem;
+        text-align: center;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .footer_socials :last-child { /* Removes right border from final list element */ 
