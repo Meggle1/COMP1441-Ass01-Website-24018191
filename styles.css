@@ -45,9 +45,8 @@
 }
 
 .gridcontainer {
-    min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3.1fr 1fr;
 }
 
 /* --- Header --- */
@@ -70,39 +69,56 @@
     object-fit: contain;
 }
 
+/* Searchbar */
+
 .searchbar {
     grid-area: searchbar;
     display: flex;
     align-items: center;
     width: 100%;
-    height: 2rem;
+    height: 1.75rem;
 }
 
 .searchInput {
-    width: 8rem;
-    border: 3px solid purple;
+    width: 100%;
+    min-width: 8rem;
+    border: 3px solid #D29093;
     border-right: none;
-    height: 2rem;
+    height: 1.75rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.2rem; /* Gives a little space on the inside */
 }
 
 .searchButton {
     width: 30px;
-    border: 1px solid purple;
+    border: 3px solid #D29093;
     cursor: pointer;
-    background-color: purple;
-    color: white;
-    height: 2rem;
+    background-color: #D29093;
+    height: 1.75rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+input:focus { /* Removes focus outline when selecting searchbar */
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
 
 /* --- Navbar --- */
 
 .navbar {
-    align-items:baseline;
+    align-items:center;
     justify-content: center;
     display: flex;
     grid-area: navbar;
-    height: 4rem;
+    height: 2.75rem;
     margin: 0.4rem 0 4rem;
+    padding: 0 0.5rem 0 0.5rem;
+    background-color: #FFC8DD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0.75rem;
 }
 
 .navlist {
@@ -110,45 +126,73 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.1rem 0 0.1rem;
+    height: 100%;
 }
 
 .navlist li {
     padding: 0.25rem;
-    border: 1px solid black;
-    background-color: rgb(163, 163, 163);
+    border: 3px solid #ba9ccc;
+    background-color: #CDB4DB;
     display: inline-block;
-    width: calc(85%/4);
+    width: calc(85%/4); /* Calc to easily add li elements */
     text-align: center;
-    margin: 0 2rem 0 0;
+    margin-right: 2rem;
+    height: 75%;
+    text-decoration: none;
+    font-size: 10px !important; /* !important overwrites other styles defining font-size */
+    border-radius: 0.75rem;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: rgb(58, 23, 90); /* Text Colour */
 }
 
 .navlist li:last-child {
-    margin: 0;
+    margin-right: 0; /* Removes margin on last navlist entry */
 }
 
 /* --- Main Content --- */
 
 .main-container {
-    /* border: 1px solid green; */
     grid-area: main;
     min-height: 80vh; /* Temporary */
     overflow-x: auto;
 }
 
 .widebox {
-    background-color: lightblue;
-    border: 1px solid lightskyblue;
-    height: 40vh;
+    background-color: #DAB9DC;
+    border: 0.3rem solid #C8ACD7;
+    border-radius: 1rem;
+    height: 28rem;
+    padding: 0.4rem;
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position:right;
+    }
 }
 
 .scroll-box-container {
-    list-style-type: none; /* Removes list dots */
     margin: 5vh 0 5vh;
-    display: flex;
-    gap: 2vw;
-    overflow-x: scroll; /* Hides overflow and adds scrollbar */
-    padding: 1em 0 1em;
+    & ul {
+        list-style-type: none; /* Removes list dots */
+        display: flex;
+        gap: 2vw; /* Gap between items */
+        overflow-x: scroll; /* Hides overflow and adds scrollbar */
+        padding: 1em 0 1em;
+    }
+    & h1 {
+        margin-top: 10rem;
+        padding: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #616161;
+        font-size: 20px;
+        width: 100%;
+        background-color: #BDE0FE;
+        border-radius: 0.5rem;
+    }
 }
 
 .scroll-box-container::before, 
@@ -156,17 +200,48 @@
   content: '';
 } 
 
+
+
 .scroll-box_item {
-    background-color: lightblue;
-    border: 1px solid lightskyblue;
+    background-color: #DAB9DC;
+    border: 0.4rem solid #C8ACD7;
     flex: 0 0 auto;
-    
+    border-radius: 0.7rem;  
+    padding: 0.3rem;
+    display: flex;
+    & p {
+        padding: 0.75rem;
+    }
 }
 
-.scroll-box-item > img {
-    height: 10rem;
-    width: 10rem;
-    object-fit: scale-down;
+.scroll-box_item > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#review-scroll-box {
+    background-color: #A2D2FF;
+    border: 0.4rem solid #BDE0FE;
+    flex-direction: column;
+    max-width: 20rem;
+    > img {
+        height: 15rem;
+        width: 15rem;
+        align-self: center;
+        margin-bottom: 0.5rem;
+    }
+    > h2 {
+        margin: 0.5rem 0 1rem 1.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #3a3a3a;
+        text-decoration: underline;
+        word-wrap: break-word;
+    }
+
+    > p {
+
+    }
 }
 
 /* --- Footer --- */
@@ -181,12 +256,13 @@
     justify-content: center;
     padding: 1rem;
     margin-top: 12rem;
-    background-color: #ffc5ce;
+    background-color: #FFC8DD;
 }
 
 .footer_copyright {
     border: 1px solid black;
     padding: 0.2rem;
+    background-color: white;
 }
 
 .footer_socials {
