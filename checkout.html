@@ -34,21 +34,28 @@
             <div class="checkoutgrid-container"> 
                 <section class="customerDetails-wrapper">
                     <h2>Checkout</h2>
-                    <form class="customerDetails" id="checkoutform"> <!-- Customer Checkout Form -->
-                        <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" required>
-                        <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" required>
-                        <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" required>
-                        <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" required>
-                        <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" required>
-                        <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2">
-                        <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3">
+                    <form class="customerDetails-form" id="checkoutform"> <!-- Customer Checkout Form -->
+                        <div class="field-group">
+                            <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" required>
+                        </div>
+                        <div class="field-group">
+                            <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" required>
+                            <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" required>
+                            <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" required>
+                        </div>
+                        <div class="field-group">
+                            <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" required>
+                            <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2">
+                            <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3">
+                        </div>
                     </form>
                 </section>
 
                 <aside class="paymentOverview-wrapper">
                     <img src="https://placehold.co/200x900/png">
                     <h3 class="productname">Cyan Bear Plushie</h3>
-                    <strong>Total: £35</strong>
+                    <p>Quantity: 1</p>
+                    <strong><br>Total: £35</strong>
                 </aside>
 
                 <button type="submit" class="paymentButton" form="checkoutform">Pay Now</button> <!-- Uses form ID & form attribute to submit -->

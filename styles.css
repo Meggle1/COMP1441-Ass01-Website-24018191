@@ -1,4 +1,12 @@
-* {
+/* Palette:
+#CDB4DB - Thistle (Purple)
+#FFC8DD - Fairy Tale (Light Pink)
+#FFAFCC - Carnation Pink (Pink)
+#BDE0FE - Uranian Blue (Light Blue)
+#A2D2FF - Light Sky Blue (Blue)
+*/
+
+* { /* Removes auto-padding and margin */
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
@@ -46,7 +54,7 @@
 
 .gridcontainer {
     display: grid;
-    grid-template-columns: 1fr 3.1fr 1fr;
+    grid-template-columns: 1fr 3.3fr 1fr;
 }
 
 /* --- Header --- */
