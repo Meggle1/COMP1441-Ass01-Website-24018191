@@ -141,12 +141,24 @@ input:focus::placeholder {
     text-decoration: none;
     font-size: 10px !important; /* !important overwrites other styles defining font-size */
     border-radius: 0.75rem;
+    a { /* Link & Text of navbar entry */
+        text-decoration: none;
+        color: rgb(58, 23, 90); /* Text Colour */
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
 }
 
-.navlist a {
-    text-decoration: none;
-    color: rgb(58, 23, 90); /* Text Colour */
+.navlist li:hover {
+    border: 3px solid #b182cc;
+    a {
+        color: #a527be;
+    }
 }
+
+
+
 
 .navlist li:last-child {
     margin-right: 0; /* Removes margin on last navlist entry */
@@ -190,7 +202,7 @@ input:focus::placeholder {
         color: #616161;
         font-size: 20px;
         width: 100%;
-        background-color: #BDE0FE;
+        background-color: #e4bdfe;
         border-radius: 0.5rem;
     }
 }
@@ -238,7 +250,6 @@ input:focus::placeholder {
         text-decoration: underline;
         word-wrap: break-word;
     }
-
     > p {
 
     }
@@ -272,15 +283,15 @@ input:focus::placeholder {
     padding: 0.2rem;
     align-content: center;
     li {
-        border-right: 1px solid rgb(51, 51, 51);
-        /* border-left: 1px solid rgb(51, 51, 51); */
+        border-right: 0.15rem solid rgb(58, 58, 58);
         display: inline-block;
-        padding: 0.25vw;
+        padding: 0.25rem;
         width: 2rem;
         text-align: center;
+        font-family: 'Courier New', Courier, monospace;
         img {
-            max-width: 100%;
-            height: auto;
+            width: 80%;
+            vertical-align: middle;
         }
     }
 }

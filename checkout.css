@@ -13,14 +13,24 @@
     overflow-y: scroll;
 }
 
-.customerDetails ul {
-    
-}
-
 .paymentOverview-wrapper {
     grid-area: overview;
     border: 1px black solid;
     height: 28rem;
+    object-fit: contain;
+    padding: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    > img {
+        width: 20rem;
+        max-height: 20rem;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+    > h3 {
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+        text-decoration: underline;
+    }
 }
 
 .paymentButton {
