@@ -21,14 +21,13 @@
         "info . overview" 
         "payment payment payment";
         padding: 0 1rem 1rem 1rem; /* Stops scaling hover animation from cropping */
+        grid-template-columns: 1fr 0.8fr 1.2fr;
     }
 }
 
 /* -- Grid Container -- */
 .checkoutgrid-container {
-
     display: grid;
-    grid-template-columns: 1fr 0.8fr 1.2fr;
     * {
         font-family: Arial, Helvetica, sans-serif;
     }
