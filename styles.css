@@ -16,7 +16,7 @@
 
 @media only screen and (max-width: 1024px) {
     * {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .gridcontainer {
@@ -50,6 +50,9 @@
     "footer footer footer";
     }
 
+    .navlist li {
+        margin-right: 2rem;
+    }
 }
 
 .gridcontainer {
@@ -122,7 +125,7 @@ input:focus::placeholder {
     display: flex;
     grid-area: navbar;
     height: 2.75rem;
-    margin: 0.4rem 0 4rem;
+    margin: 0.4rem 0 3rem;
     padding: 0 0.5rem 0 0.5rem;
     background-color: #FFC8DD;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -131,10 +134,10 @@ input:focus::placeholder {
 
 .navlist {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
 .navlist li {
@@ -144,7 +147,6 @@ input:focus::placeholder {
     display: inline-block;
     width: calc(85%/4); /* Calc to easily add li elements */
     text-align: center;
-    margin-right: 2rem;
     height: 75%;
     text-decoration: none;
     font-size: 10px !important; /* !important overwrites other styles defining font-size */
@@ -191,6 +193,7 @@ input:focus::placeholder {
         height: 100%;
         object-fit:cover;
         object-position:right;
+        border-radius: 0.8rem;
     }
 }
 
@@ -203,15 +206,15 @@ input:focus::placeholder {
         overflow-x: scroll; /* Hides overflow and adds scrollbar */
         padding: 1em 0 1em;
     }
-    & h1 {
-        margin-top: 10rem;
+    > h1 {
+        background-color: #e7c8e9;
         padding: 1rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #616161;
         font-size: 20px;
         width: 100%;
-        background-color: #e4bdfe;
         border-radius: 0.5rem;
+        text-align: center;
     }
 }
 
@@ -220,8 +223,6 @@ input:focus::placeholder {
   content: '';
 } 
 
-
-
 .scroll-box_item {
     background-color: #DAB9DC;
     border: 0.4rem solid #C8ACD7;
@@ -229,44 +230,73 @@ input:focus::placeholder {
     border-radius: 0.7rem;  
     padding: 0.3rem;
     display: flex;
+    max-width: 20rem;
+    position: relative; /* Allows ribbon to position correctly */
     & p {
         padding: 0.75rem;
     }
-}
-
-.scroll-box_item > img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 #review-scroll-box {
+    > h1 { /* 'User Reviews' Text */
+        margin-top: 10rem;
+        background-color: #A2D2FF;
+    }
+    & li {
+    display: flex;
     background-color: #A2D2FF;
     border: 0.4rem solid #BDE0FE;
     flex-direction: column;
-    max-width: 20rem;
-    > img {
-        height: 15rem;
-        width: 15rem;
-        align-self: center;
-        margin-bottom: 0.5rem;
-    }
-    > h2 {
+        > h2 { /* Reviewer Name Text */
         margin: 0.5rem 0 1rem 1.5rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #3a3a3a;
         text-decoration: underline;
         word-wrap: break-word;
     }
-    > p {
-
+        > img { /* Portrait of Reviewer / Reviewed Product */
+            height: 15rem;
+            width: 15rem;
+            align-self: center;
+            margin-bottom: 0.5rem;
     }
+        > p { /* Review Text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    }
+}
+
+.hot-ribbon {
+    width: 5rem;
+    transform: rotate(25deg);
+    border-radius: 1rem;
+    background-color: rgb(224, 204, 17);
+    color: rgb(238, 238, 238);
+    right: -35px;
+    top: -15px;
+    padding: 4px;
+    text-align: center;
+    position: absolute;
+}
+
+.sale-ribbon {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    width: 20px;
+    top: 0;
+    right: 0;
 }
 
 /* --- Footer --- */
 
 .footer {
-    border: 1px solid black;
+    border: 1px solid rgb(56, 56, 56);
     align-items: center;
     height: 8rem;
     grid-area: footer;

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Clothing Website</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="contact.css">
+    
 </head>
 <body>
     <div class="gridcontainer">
@@ -30,9 +31,48 @@
         </nav>
         
         <main class="main-container">                <!-- Main -->
+            <div class="contactgrid-container">
+                <div class="heading-container">
+                    <h2>Here to help!</h2>
+                </div>
+                
+                <section class="information-container">
+                    <div class="informationText">
+                        <p>Leave any queries you have here, <br>and we'll get back to you!</p>
+                    </div>
+                    <div class="teleInfoText">
+                        <p>Alternatively, give us a call!</p>
+                        <p>+44 3542 712468</p>
+                    </div>
+                </section>
 
+                <div class="contact-form-container">
+                    <form action="#" class="contact-form">
+                        <div class="contact-input-container">
+                            <label for="contact-name-field">Name</label>
+                            <input type="text" name="contact-name" id="contact-name-field" required>
+                        </div>
+                        <div class="contact-input-container">
+                            <label for="contact-email-field">Email</label>
+                            <input type="text" name="contact-email" id="contact-email-field" required>
+                        </div>
+                        <div class="form-subject-select">
+                            <label for="contact-subject-type">Subject Type:</label>
+                            <select name="contact-subject-type" id="">
+                                <option name="contact-subject-type" id="feedback" value="Feedback">Feedback</option>
+                                <option name="contact-subject-type" id="order_status" value="Order Status">Order Status</option>
+                                <option name="contact-subject-type" id="collab" value="Collab">Collab</option>
+                            </select>
+                        </div>
+                        <div class="contact-input-container" id="message-container">
+                            <label for="contact-message-field">Message:</label>
+                            <input type="text" name="contact-message" id="contact-message-field" required>
+                        </div>
 
-
+                        <button type="submit" class="submitButton" form="contact-form">Submit</button> <!-- Uses form ID & form attribute to submit -->
+                    </form>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">                     <!-- Footer -->

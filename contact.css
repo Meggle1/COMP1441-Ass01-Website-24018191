@@ -1,0 +1,127 @@
+/* Palette:
+#CDB4DB - Thistle (Purple)
+#FFC8DD - Fairy Tale (Light Pink)
+#FFAFCC - Carnation Pink (Pink)
+#BDE0FE - Uranian Blue (Light Blue)
+#A2D2FF - Light Sky Blue (Blue)
+*/
+
+@media only screen and (max-width: 1024px) { /* Smaller Screens */
+    .contactgrid-container {
+        grid-template-areas: 
+        "heading"
+        "form" 
+        "info";
+    }
+}
+
+@media only screen and (min-width: 1024px) { /* Big Screens / PC */
+    .contactgrid-container {
+        grid-template-areas: 
+        "heading heading heading" 
+        "info . form";
+        grid-template-columns: 1.3fr 0.5fr 1fr;
+        grid-template-rows: 1fr 6fr;
+    }
+    .information-container {
+        .informationText {
+            height: 40%;
+        }
+        .teleInfoText {
+            height: 40%;
+        }
+    }
+}
+
+.contactgrid-container {
+    display: grid;
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.heading-container {
+    grid-area: heading;
+    border: 1px dashed red;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    h2 {
+        border: 1px solid red;
+        font-size: 2.5rem;
+    }
+}
+
+.information-container {
+    grid-area: info;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    p {
+        font-size: 1.7rem;
+    }
+    .informationText {
+        border: 1px solid red;
+        text-align: center;
+        align-content: center;
+    }
+    .teleInfoText {
+        border: 1px solid red;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.contact-form-container {
+    border: 1px solid red;
+    padding: 1rem 3rem 1rem 3rem;
+    grid-area: form;
+}
+
+.contact-form {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    .contact-input-container {
+        position: relative;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        > label {
+            position: absolute;
+            top: -0.7rem;
+            left: 2rem;
+            z-index: 1; /* Places above */
+            background-color: white; /* Hides border behind it */
+            padding: 0 0.3rem 0 0.3rem;
+        }
+        > input {
+            position: relative;
+            height: 2rem;
+            text-indent: 1rem;
+            width: 100%;
+        }
+    }
+    #message-container { /* Special styling for message box */
+        > input {
+            height: 12rem;
+        }
+        > label {
+            top: -0.7rem;
+            left: 1rem;
+        }
+    }
+    .form-subject-select {
+        display:flex;
+        gap: 0.8rem;
+    }
+}
+
