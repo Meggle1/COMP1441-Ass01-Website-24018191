@@ -10,14 +10,11 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    img {
-        -webkit-user-drag: none;
-    }
 }
 
 /* --- Media Queries --- */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) { /* Smaller Screens */
     * {
         font-size: 13px;
     }

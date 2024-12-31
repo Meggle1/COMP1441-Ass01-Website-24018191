@@ -16,7 +16,7 @@
             </div>
             <div class="searchbar">
                 <form action="" method="get"></form>
-                <input type="text" class="searchInput" placeholder="Search products..">
+                <input type="text" class="searchInput" placeholder="Search products.." aria-label="Search Products">
                 <button type="submit" class="searchButton" alt="Search Button"><img src="svg/circle-arrow-right(2).svg" alt="O"></button>
             </div>
         </header>
@@ -36,23 +36,23 @@
                     <h2>Checkout</h2>
                     <form class="customerDetails-form" id="checkoutform" action="#"> <!-- Customer Checkout Form -->
                         <div class="field-group">
-                            <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" required>
+                            <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" aria-label="Name input" required>
                         </div>
                         <div class="field-group">
-                            <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" required>
-                            <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" required>
-                            <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" required>
+                            <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" aria-label="Email input" required>
+                            <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" aria-label="Phone Number input" required>
+                            <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" aria-label="Country input" required>
                         </div>
                         <div class="field-group">
-                            <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" required>
-                            <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2">
-                            <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3">
+                            <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" aria-label="First line of address input" required>
+                            <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2" aria-label="Second line of address input">
+                            <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3" aria-label="Third line of address input">
                         </div>
                     </form>
                 </section>
 
                 <aside class="paymentOverview-wrapper">
-                    <img src="https://placehold.co/300x300/png">
+                    <img src="https://placehold.co/300x300/png" alt="">
                     <h3 class="productname">Cyan Bear Plushie</h3>
                     <p>Quantity: 1</p>
                     <strong><br>Total: £35</strong>
