@@ -14,10 +14,11 @@
             <div class="logo">
                 <img src="https://placehold.co/125x50/png" alt="Company Logo" class="header-logo">
             </div>
-            <div class="searchbar">
-                <form action="" method="get"></form>
-                <input type="text" class="searchInput" placeholder="Search products.." aria-label="Search Products">
-                <button type="submit" class="searchButton" alt="Search Button"><img src="svg/circle-arrow-right(2).svg" alt="O"></button>
+            <div class="searchbar" role="Search Bar">
+                <form action="#" method="get">
+                    <input type="text" class="searchInput" placeholder="Search products.." aria-label="Search Products input">
+                    <button type="submit" class="searchButton" alt="Search Button"><img src="svg/circle-arrow-right(2).svg" alt="O"></button>
+                </form>
             </div>
         </header>
 
@@ -47,7 +48,7 @@
                         <p>+44 3542 712468</p>
                     </div>
                 </section>
-                    <form action="#" class="contact-form" id="contact-form">
+                    <form action="#" method="post" class="contact-form" id="contact-form"> <!-- Contact Form --> 
                         <div class="contact-input-container">
                             <label for="contact-name-field">Name</label>
                             <input type="text" name="contact-name" id="contact-name-field" required>
@@ -58,7 +59,7 @@
                         </div>
                         <div class="form-subject-select">
                             <label for="contact-subject-type">Subject Type:</label>
-                            <select name="contact-subject-type" id="">
+                            <select name="contact-subject-type" id="formSubjectType">
                                 <option name="contact-subject-type" id="feedback" value="Feedback">Feedback</option>
                                 <option name="contact-subject-type" id="order_status" value="Order Status">Order Status</option>
                                 <option name="contact-subject-type" id="collab" value="Collab">Collab</option>

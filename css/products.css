@@ -4,6 +4,7 @@
 #FFAFCC - Carnation Pink (Pink)
 #BDE0FE - Uranian Blue (Light Blue)
 #A2D2FF - Light Sky Blue (Blue)
+#ba9ccc - Purple
 */
 
 * { /* Removes auto-padding and margin */
@@ -16,13 +17,38 @@
     .productSlot {
         flex-basis: 30%;
     }
-
+    .page-header {
+        height: 5rem;
+        h1 {
+        font-size: 30px;
+        }
+    }
+    .productPhoto img {
+        width: 16rem; /* For images in rows that aren't full */
+    }
 }
 
 @media only screen and (min-width: 1024px) { /* Big Screens / PC */
     .productSlot {
         flex-basis: 22%;
     }
+    .page-header {
+        height: 4rem;
+        h1 {
+        font-size: 40px;
+        }
+        margin-bottom: 1rem;
+    }
+    .productPhoto img {
+        width: 20rem; /* For images in rows that aren't full */
+    }
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .products-container {

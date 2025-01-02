@@ -4,6 +4,7 @@
 #FFAFCC - Carnation Pink (Pink)
 #BDE0FE - Uranian Blue (Light Blue)
 #A2D2FF - Light Sky Blue (Blue)
+#ba9ccc - Purple
 */
 
 @media only screen and (max-width: 1024px) { /* Smaller Screens */
@@ -117,7 +118,6 @@
     justify-self: center;
     align-items: center;
     font-size: 2rem;
-
 }
 
 .paymentButton:hover {

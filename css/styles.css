@@ -4,6 +4,7 @@
 #FFAFCC - Carnation Pink (Pink)
 #BDE0FE - Uranian Blue (Light Blue)
 #A2D2FF - Light Sky Blue (Blue)
+#ba9ccc - Purple
 */
 
 * { /* Removes auto-padding and margin */
@@ -93,10 +94,11 @@
 
 .searchbar {
     grid-area: searchbar;
-    display: flex;
-    align-items: center;
     width: 100%;
     height: 1.75rem;
+    > form {
+        display: flex;
+    }
 }
 
 .searchInput {
@@ -150,12 +152,11 @@ input:focus::placeholder {
 }
 
 .navlist li {
-    padding: 0.25rem;
     border: 3px solid #ba9ccc;
     background-color: #CDB4DB;
     display: inline-block;
     width: calc(85%/4); /* Calc to easily add li elements */
-    text-align: center;
+    text-align: center; /* Puts text in middle instead of far left */
     height: 75%;
     text-decoration: none;
     font-size: 10px !important; /* !important overwrites other styles defining font-size */
@@ -166,6 +167,7 @@ input:focus::placeholder {
         width: 100%;
         height: 100%;
         display: inline-block;
+        align-content: center;
     }
 }
 
@@ -213,7 +215,7 @@ input:focus::placeholder {
         display: flex;
         gap: 2vw; /* Gap between items */
         overflow-x: scroll; /* Hides overflow and adds scrollbar */
-        padding: 1em 0 1em;
+        padding: 1.5rem 0 1.5rem;
     }
     > h1 {
         background-color: #e7c8e9;
@@ -252,8 +254,8 @@ input:focus::placeholder {
 }
 
 #review-scroll-box {
+    margin-top: 7rem;
     > h1 { /* 'User Reviews' Text */
-        margin-top: 10rem;
         background-color: #A2D2FF;
     }
     & li {
