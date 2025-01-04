@@ -302,7 +302,7 @@ input:focus::placeholder {
     width: 5rem;
     transform: rotate(25deg);
     border-radius: 1rem;
-    background-color: rgb(224, 204, 17);
+    background-color: rgb(162, 0, 0);
     color: rgb(238, 238, 238);
     padding: 4px;
     text-align: center;
