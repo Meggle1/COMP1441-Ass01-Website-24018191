@@ -72,6 +72,14 @@
     background-color: #DAB9DC;
 }
 
+.productSlot:hover {
+    background-color: #836085;
+}
+
+.productSlot:active {
+    transform: scale(0.96);
+}
+
 .productPhoto img {
     max-width: 100%;
 }

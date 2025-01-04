@@ -40,6 +40,10 @@
         right: -25px;
         top: -15px;
     }
+
+    .header {
+        grid-template-columns: 1fr 1fr 1.25fr;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -55,17 +59,32 @@
     "footer footer footer";
     }
 
+    .header {
+        grid-template-columns: 1fr 4fr 1.25fr;
+    }
+    
     .navlist li {
         margin-right: 2rem;
+    }
+
+    .navlist li:active {
+        transform: scale(0.96);
     }
 
     .hot-ribbon {
         right: -35px;
         top: -15px;
     }
+    .logo > img {
+        width: 90%;
+        object-fit: contain;
+    }
 }
 
+/* --- Container --- */
+
 .gridcontainer {
+    margin-top: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 3.3fr 1fr;
 }
@@ -75,19 +94,16 @@
 .header {
     /* border: 1px solid red; */
     grid-area: header;
-    height: 4rem;
+    height: 4.5rem;
+    min-height: fit-content;
     display: grid;
-    grid-template-columns: 1fr 4fr 1.25fr;
     grid-template-areas: 
     "logo . searchbar";
     align-items: center;
 }
 
-.logo > img {
+.logo {
     grid-area: logo;
-    height: auto;
-    width: 10rem;
-    object-fit: contain;
 }
 
 /* Searchbar */
@@ -203,13 +219,13 @@ input:focus::placeholder {
         width: 100%;
         height: 100%;
         object-fit:cover;
-        object-position:right;
+        object-position:center;
         border-radius: 0.8rem;
     }
 }
 
 .scroll-box-container {
-    margin: 5vh 0 5vh;
+    margin: 4rem 0 2rem;
     & ul {
         list-style-type: none; /* Removes list dots */
         display: flex;
@@ -241,20 +257,20 @@ input:focus::placeholder {
     border-radius: 0.7rem;  
     padding: 0.3rem;
     display: flex;
-    max-width: 20rem;
+    width: 20rem;
+    height: 20rem;
     position: relative; /* Allows ribbon to position correctly */
-    & p {
+    p {
         padding: 0.75rem;
     }
-    > img {
-        height: 100%;
+    img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 
 #review-scroll-box {
-    margin-top: 7rem;
+    margin-top: 5rem;
     > h1 { /* 'User Reviews' Text */
         background-color: #A2D2FF;
     }

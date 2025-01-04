@@ -148,8 +148,10 @@
         }
     }
     #message-container { /* Special styling for message box */
-        > input {
+        textarea {
             height: 14rem;
+            width: 100%;
+            padding: 1rem;
         }
         > label {
             top: -0.7rem;
