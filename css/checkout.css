@@ -11,7 +11,7 @@
     .checkoutgrid-container {
         grid-template-areas: 
         "overview"
-        "info" 
+        "details" 
         "payment";
     }
 }
@@ -19,10 +19,10 @@
 @media only screen and (min-width: 1024px) { /* Big Screens / PC */
     .checkoutgrid-container {
         grid-template-areas: 
-        "info . overview" 
+        "details . overview" 
         "payment payment payment";
         padding: 0 1rem 1rem 1rem; /* Stops scaling hover animation from cropping */
-        grid-template-columns: 1fr 0.8fr 1.2fr;
+        grid-template-columns: 1.1fr 0.6fr 1.2fr;
     }
 }
 
@@ -34,10 +34,13 @@
     }
 }
 
-
+.checkout-form {
+    display: flex;
+}
 
 /* -- Customer Details -- */
 .customerDetails-wrapper {
+    grid-area: details;
     padding: 0.2rem;
     > h2 { 
     margin-bottom: 1.5rem;
@@ -47,7 +50,7 @@
     }
 }
 
-.customerDetails-form {
+.customerDetails {
     border: 2px solid #FFAFCC;
     border-radius: 2rem;
     padding: 1rem;
@@ -73,31 +76,53 @@
 }
 
 /* Payment Overview */
-.paymentOverview-wrapper {
+.paymentOverview-container {
     grid-area: overview;
+    display: grid;
+    grid-template-areas: 
+    "items"
+    "total";
+    grid-template-rows: 1fr 0.1fr;
     border: 2px solid #FFAFCC;
     background-color: #fbdaff28;
     border-radius: 2rem;
     height: 35rem;
-    object-fit: contain;
     padding: 1.2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
     overflow-y: auto;
     font-size: larger;
-    > img {
-        width: 20rem;
-        max-width: 100%;
-        max-height: 20rem;
-        object-fit: cover;
-        margin-bottom: 1rem;
-        align-self: center;
+    ul {
+        padding-right: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        grid-area: items;
+        overflow-y: auto;
     }
-    > h3 {
-        margin-bottom: 0.5rem;
-        font-weight: normal;
-        text-decoration: underline;
+    .cart-item-entry {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 5rem;
+            height: 100%;
+            object-fit: fill;
+        }
+        p {
+            width: 25%;
+            font-weight: normal;
+        }
+        input {
+          width: 25%;
+          height: 2rem;
+        }
+    }
+    .cart-total {
+        text-align: center;
+        grid-area: total;
+        align-content: end;
         font-size: larger;
     }
 }

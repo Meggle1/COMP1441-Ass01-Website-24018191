@@ -32,36 +32,68 @@
         </nav>
         
         <main class="main-container">                <!-- Main -->
-            <div class="checkoutgrid-container"> 
-                <section class="customerDetails-wrapper">
-                    <h2>Checkout</h2>
-                    <form class="customerDetails-form" id="checkoutform" action="#" method="post"> <!-- Customer Checkout Form -->
-                        <div class="field-group">
-                            <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" aria-label="Name input" required>
-                        </div>
-                        <div class="field-group">
-                            <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" aria-label="Email input" required>
-                            <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" aria-label="Phone Number input" required>
-                            <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" aria-label="Country input" required>
-                        </div>
-                        <div class="field-group">
-                            <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" aria-label="First line of address input" required>
-                            <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2" aria-label="Second line of address input">
-                            <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3" aria-label="Third line of address input">
-                        </div>
-                    </form>
-                </section>
+            <form class="checkout-form" id="checkoutform" action="#" method="post"> <!-- Customer Checkout Form -->
+                <div class="checkoutgrid-container">
+                        <section class="customerDetails-wrapper"> <!-- Customer Details -->
+                            <h2>Checkout</h2>
+                            <section class="customerDetails">
+                                <div class="field-group">
+                                    <input type="text" name="name-field" id="checkout-name-field" placeholder="Name" aria-label="Name input" required>
+                                </div>
+                                <div class="field-group">
+                                    <input type="text" name="email-field" id="checkout-email-field" placeholder="Email" aria-label="Email input" required>
+                                    <input type="text" name="tel-field" id="checkout-telnum-field" placeholder="Phone Number" aria-label="Phone Number input" required>
+                                    <input type="text" name="country-field" id="checkout-country-field" placeholder="Country" aria-label="Country input" required>
+                                </div>
+                                <div class="field-group">
+                                    <input type="text" name="addr1-field" id="checkout-address1-field" placeholder="Address 1" aria-label="First line of address input" required>
+                                    <input type="text" name="addr2-field" id="checkout-address2-field" placeholder="Address 2" aria-label="Second line of address input">
+                                    <input type="text" name="addr3-field" id="checkout-address3-field" placeholder="Address 3" aria-label="Third line of address input">
+                                </div>
+                            </section>
+                        </section>
 
-                <aside class="paymentOverview-wrapper">
-                    <img src="https://placehold.co/300x300/png" alt="">
-                    <h3 class="productname">Cyan Bear Plushie</h3>
-                    <p>Quantity: 1</p>
-                    <strong><br>Total: £35</strong>
-                </aside>
+                        <aside class="paymentOverview-container"> <!-- Cart Overview -->
+                            <ul>
+                                <li class="cart-item-entry">
+                                    <img src="img/pexels-2375361-10585181-tiger.jpg" alt="Crocheted Orange Tiger with a yellow scarf">
+                                    <p class="productname">Ted the Tiger</p>
+                                    <input type="number" value="1" min="0" aria-label="Current quantity of item in cart">
+                                    <span>£12.99</span>
+                                </li>
+                                <li class="cart-item-entry">
+                                    <img src="img/pexels-arina-krasnikova-owl.jpg" alt="Cuddly toy barn owl">
+                                    <p class="productname">Barny the Owl</p>
+                                    <input type="number" value="1" min="0" aria-label="Current quantity of item in cart">
+                                    <span>£11.99</span>
+                                </li>
+                                <li class="cart-item-entry">
+                                    <img src="img/pexels-kelsey-caroline-pumpkinKitty.jpg" alt="Plush toy of a anthropomorphic kitten in pumpkin attire">
+                                    <p class="productname">Pumpki-tty</p>
+                                    <input type="number" value="1" min="0" aria-label="Current quantity of item in cart">
+                                    <span>£13.99</span>
+                                </li>
+                                <li class="cart-item-entry">
+                                    <img <img src="img/pexels-2375361-10585181-chick.jpg" alt="Crocheted Yellow Baby Chicken">
+                                    <p class="productname">Baby Chick</p>
+                                    <input type="number" value="1" min="0" aria-label="Current quantity of item in cart">
+                                    <span>£9.99</span>
+                                </li>
+                                <li class="cart-item-entry">
+                                    <img src="img/pexels-prithiviraj-greenDino.jpg" alt="Fuzzy plush toy of a green dinosaur">
+                                    <p class="productname">Doris the Dino</p>
+                                    <input type="number" value="1" min="0" aria-label="Current quantity of item in cart">
+                                    <span>£14.99</span>
+                                </li>
+                            </ul>
+                            <strong class="cart-total" id="cart-sum-total">Total: £63.95</strong>
+                        </aside>
 
-                <button type="submit" class="paymentButton" form="checkoutform">Pay Now</button> <!-- Uses form ID & form attribute to submit -->
-            </div>
+                
 
+                    <button type="submit" class="paymentButton" form="checkoutform">Pay Now</button> <!-- Uses form ID & form attribute to submit -->
+                </div>
+            </form>
 
         </main>
 
