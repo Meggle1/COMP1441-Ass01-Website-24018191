@@ -52,7 +52,9 @@
         height: 3rem;
     }
     .product-photo {
-        height: 40rem;
+        img {
+            height: 40rem;
+        }
     }
     .product-description {
         h3 {
