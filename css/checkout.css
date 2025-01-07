@@ -13,6 +13,7 @@
         "overview"
         "details" 
         "payment";
+        row-gap: 1rem;
     }
 }
 
@@ -141,7 +142,7 @@
     background-color: #ffbfd6;
     color: rgb(119, 66, 206);
     border-radius: 1rem;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     width: 25rem;
     height: 4rem;
     display: flex;

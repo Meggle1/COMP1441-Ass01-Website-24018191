@@ -17,7 +17,7 @@
 
 @media only screen and (max-width: 1024px) { /* Smaller Screens */
     * {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .gridcontainer {
@@ -43,6 +43,12 @@
 
     .header {
         grid-template-columns: 1fr 1fr 1.25fr;
+    }
+    
+    #review-scroll-box {
+        p {
+            font-size: large;
+        }
     }
 }
 
@@ -229,7 +235,7 @@ input:focus::placeholder {
     ul {
         list-style-type: none; /* Removes list dots */
         display: flex;
-        gap: 2vw; /* Gap between items */
+        gap: 2rem; /* Gap between items */
         overflow-x: scroll; /* Hides overflow and adds scrollbar */
         padding: 1.5rem 0 1.5rem;
     }
@@ -279,6 +285,7 @@ input:focus::placeholder {
     background-color: #A2D2FF;
     border: 0.4rem solid #BDE0FE;
     flex-direction: column;
+    height: inherit;
     }
     h2 { /* Reviewer Name Text */
         margin: 0.5rem 0 1rem 1.5rem;
